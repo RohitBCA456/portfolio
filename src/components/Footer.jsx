@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default () => {
   const year = new Date().getFullYear();
@@ -7,27 +8,27 @@ export default () => {
     {
       label: "Portfolio",
       items: [
-        { href: "/", name: "Home" },
-        { href: "/projects", name: "Projects" },
-        { href: "/skills", name: "Skills" },
-        { href: "/contact", name: "Contact" },
+        { href: "/", name: "Home", internal: true },
+        { href: "/projects", name: "Projects", internal: true },
+        { href: "/skills", name: "Skills", internal: true },
+        { href: "/contact", name: "Contact", internal: true },
       ],
     },
     {
       label: "Resources",
       items: [
-        { href: "#blog", name: "Blog" },
-        { href: "#tips", name: "Tips & Guides" },
-        { href: "#faq", name: "FAQs" },
-        { href: "#newsletter", name: "Newsletter" },
+        { href: "#blog", name: "Blog", internal: false },
+        { href: "#tips", name: "Tips & Guides", internal: false },
+        { href: "#faq", name: "FAQs", internal: false },
+        { href: "#newsletter", name: "Newsletter", internal: false },
       ],
     },
     {
       label: "Legal",
       items: [
-        { href: "#terms", name: "Terms of Use" },
-        { href: "#privacy", name: "Privacy Policy" },
-        { href: "#license", name: "License" },
+        { href: "#terms", name: "Terms of Use", internal: false },
+        { href: "#privacy", name: "Privacy Policy", internal: false },
+        { href: "#license", name: "License", internal: false },
       ],
     },
   ];
@@ -51,7 +52,7 @@ export default () => {
       custom={0}
     >
       <div className="px-4 md:px-8 w-full">
-        {/* Newsletter */}
+        {/* Newsletter Section */}
         <motion.div
           className="md:flex justify-between items-center gap-6"
           variants={fadeUp}
@@ -92,25 +93,26 @@ export default () => {
           viewport={{ once: true }}
         >
           {footerNavs.map((section, idx) => (
-            <motion.div
-              key={idx}
-              variants={fadeUp}
-              custom={idx + 4}
-            >
+            <motion.div key={idx} variants={fadeUp} custom={idx + 4}>
               <h4 className="text-white font-semibold mb-4">{section.label}</h4>
               <ul className="space-y-3">
                 {section.items.map((item, i) => (
-                  <motion.li
-                    key={i}
-                    variants={fadeUp}
-                    custom={idx * 4 + i + 5}
-                  >
-                    <a
-                      href={item.href}
-                      className="hover:text-indigo-400 transition-colors duration-150"
-                    >
-                      {item.name}
-                    </a>
+                  <motion.li key={i} variants={fadeUp} custom={idx * 4 + i + 5}>
+                    {item.internal ? (
+                      <Link
+                        to={item.href}
+                        className="hover:text-indigo-400 transition-colors duration-150"
+                      >
+                        {item.name}
+                      </Link>
+                    ) : (
+                      <a
+                        href={item.href}
+                        className="hover:text-indigo-400 transition-colors duration-150"
+                      >
+                        {item.name}
+                      </a>
+                    )}
                   </motion.li>
                 ))}
               </ul>
@@ -124,9 +126,7 @@ export default () => {
           variants={fadeUp}
           custom={10}
         >
-          <p className="text-center">
-            © {year} Rohit Yadav. All rights reserved.
-          </p>
+          <p className="text-center">© {year} Rohit Yadav. All rights reserved.</p>
           <div className="flex gap-4 mt-4">
             <a
               href="https://github.com/RohitBCA456"
