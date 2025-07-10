@@ -181,29 +181,37 @@ export default function Header({ theme, setTheme }) {
                 </motion.button>
 
                 {/* Hire Me Button */}
-                <motion.div
-                  whileHover={{ scale: 1.07, boxShadow: "0 4px 24px #6366f1" }}
-                  whileTap={{ scale: 0.97 }}
-                >
-                  <Link
-                    to="/contact"
-                    className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 active:bg-gray-900 rounded-full shadow-lg"
+                <div className="relative overflow-visible rounded-full">
+                  <motion.div
+                    whileHover={{
+                      scale: 1.07,
+                      boxShadow: "0px 0px 20px 5px rgba(99,102,241,0.5)", // strong visible glow
+                    }}
+                    whileTap={{ scale: 0.97 }}
+                    transition={{ duration: 0.3 }}
+                    className="rounded-full" // ✅ Ensure glow shape matches
                   >
-                    Hire Me
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-5 h-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
+                    <Link
+                      to="/contact"
+                      className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 active:bg-gray-900 rounded-full shadow-md focus:outline-none focus:ring-0"
+                      style={{ textDecoration: "none" }}
                     >
-                      <path
-                        fillRule="evenodd"
-                        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </Link>
-                </motion.div>
+                      Hire Me
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-5 h-5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </Link>
+                  </motion.div>
+                </div>
               </motion.div>
             </div>
           </div>
