@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Contact({ theme }) {
   const isDark = theme === "dark";
@@ -31,20 +32,24 @@ export default function Contact({ theme }) {
             Have a project in mind, a question, or just want to connect? I’d love to hear from you. Fill out the contact form or reach out through my social platforms.
           </motion.p>
         </motion.div>
+
         <motion.div
           className="mt-6"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.7, duration: 0.5 }}
         >
-          <motion.a
-            href="/contact"
-            className="inline-block py-2 px-5 font-medium text-white bg-gradient-to-r from-gray-800 via-indigo-700 to-gray-900 hover:from-indigo-700 hover:to-gray-800 active:bg-gray-900 rounded-full transition shadow-lg"
+          <motion.div
             whileHover={{ scale: 1.08, boxShadow: "0px 8px 24px rgba(80,80,200,0.15)" }}
             whileTap={{ scale: 0.97 }}
           >
-            Let's Talk
-          </motion.a>
+            <Link
+              to="/contact"
+              className="inline-block py-2 px-5 font-medium text-white bg-gradient-to-r from-gray-800 via-indigo-700 to-gray-900 hover:from-indigo-700 hover:to-gray-800 active:bg-gray-900 rounded-full transition shadow-lg"
+            >
+              Let's Talk
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
     </section>

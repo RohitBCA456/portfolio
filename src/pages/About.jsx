@@ -3,7 +3,8 @@ import { useOutletContext } from "react-router-dom";
 import Container from "../components/Container";
 import me from "../assets/me.jpeg";
 import { motion } from "framer-motion";
-import resume from "../assets/RESUME 2.pdf"
+import resume from "../assets/RESUME 2.pdf";
+import { Link } from "react-router-dom";
 
 export default function About() {
   const { theme } = useOutletContext();
@@ -47,10 +48,12 @@ export default function About() {
 
   return (
     <Container>
-      <div className={`relative ${isDark ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
-        <div
-          className="absolute inset-0 blur-xl h-[580px]"
-        ></div>
+      <div
+        className={`relative ${
+          isDark ? "bg-gray-900 text-white" : "bg-white text-black"
+        }`}
+      >
+        <div className="absolute inset-0 blur-xl h-[580px]"></div>
 
         <div className="relative">
           {/* About Me Section */}
@@ -61,56 +64,89 @@ export default function About() {
               initial="hidden"
               animate="visible"
             >
-              <motion.div className="flex-none space-y-6 max-w-xl" variants={containerVariants}>
+              <motion.div
+                className="flex-none space-y-6 max-w-xl"
+                variants={containerVariants}
+              >
                 <motion.h2
-                  className={`text-4xl font-extrabold sm:text-5xl ${isDark ? "text-white" : "text-gray-800"}`}
+                  className={`text-4xl font-extrabold sm:text-5xl ${
+                    isDark ? "text-white" : "text-gray-800"
+                  }`}
                   variants={itemVariants}
                 >
                   About Me
                 </motion.h2>
 
-                <motion.p className="text-lg leading-relaxed" variants={itemVariants}>
+                <motion.p
+                  className="text-lg leading-relaxed"
+                  variants={itemVariants}
+                >
                   Hi, I'm{" "}
-                  <span className="font-semibold text-indigo-500">Rohit Yadav</span> — a passionate backend developer who loves building scalable APIs, secure systems, and real-time apps.
+                  <span className="font-semibold text-indigo-500">
+                    Rohit Yadav
+                  </span>{" "}
+                  — a passionate backend developer who loves building scalable
+                  APIs, secure systems, and real-time apps.
                 </motion.p>
 
                 <motion.p variants={itemVariants}>
                   I specialize in{" "}
-                  <span className="font-medium text-indigo-500">Node.js, Express, MongoDB</span>{" "}
-                  and have a solid foundation in microservices, RESTful architecture, and WebSockets.
+                  <span className="font-medium text-indigo-500">
+                    Node.js, Express, MongoDB
+                  </span>{" "}
+                  and have a solid foundation in microservices, RESTful
+                  architecture, and WebSockets.
                 </motion.p>
 
-                <motion.p className={`${isDark ? "text-neutral-400" : "text-gray-700"}`} variants={itemVariants}>
-                  When I’m not coding, I enjoy exploring new tech trends, contributing to open source, and sharing my knowledge to help others grow.
+                <motion.p
+                  className={`${isDark ? "text-neutral-400" : "text-gray-700"}`}
+                  variants={itemVariants}
+                >
+                  When I’m not coding, I enjoy exploring new tech trends,
+                  contributing to open source, and sharing my knowledge to help
+                  others grow.
                 </motion.p>
 
-                <motion.div className="flex items-center gap-x-4 sm:text-sm" variants={itemVariants}>
+                <motion.div
+                  className="flex items-center gap-x-4 sm:text-sm"
+                  variants={itemVariants}
+                >
                   <a
                     href={resume}
                     download
                     className="inline-flex items-center justify-center gap-x-2 py-2 px-4 text-white font-medium bg-indigo-600 hover:bg-indigo-700 rounded-full transition duration-200"
                   >
                     Download Resume
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <svg
+                      className="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
                       <path d="M9 2a1 1 0 012 0v8.586l2.293-2.293a1 1 0 111.414 1.414L10 14.414l-4.707-4.707a1 1 0 011.414-1.414L9 10.586V2z" />
                       <path d="M3 16a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" />
                     </svg>
                   </a>
-                  <a
-                    href="/contact"
+                  <Link
+                    to="/contact"
                     className={`inline-flex items-center justify-center gap-x-1 py-2 px-4 font-medium transition duration-200 ${
-                      isDark ? "text-white hover:text-indigo-400" : "text-gray-800 hover:text-indigo-700"
+                      isDark
+                        ? "text-white hover:text-indigo-400"
+                        : "text-gray-800 hover:text-indigo-700"
                     }`}
                   >
                     Contact Me
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <svg
+                      className="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
                       <path
                         fillRule="evenodd"
                         d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
                         clipRule="evenodd"
                       />
                     </svg>
-                  </a>
+                  </Link>
                 </motion.div>
               </motion.div>
 
@@ -148,7 +184,9 @@ export default function About() {
                   transition={{ delay: 0.2, duration: 0.6 }}
                 >
                   <motion.h1
-                    className={`text-2xl font-bold ${isDark ? "text-white" : "text-gray-800"}`}
+                    className={`text-2xl font-bold ${
+                      isDark ? "text-white" : "text-gray-800"
+                    }`}
                     initial={{ scale: 0.9 }}
                     animate={{ scale: 1 }}
                     transition={{ delay: 0.3, duration: 0.4 }}
@@ -173,7 +211,11 @@ export default function About() {
                       className="relative z-10 size-7 flex justify-center items-center"
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
-                      transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
+                      transition={{
+                        delay: 0.5,
+                        type: "spring",
+                        stiffness: 200,
+                      }}
                     >
                       <motion.div
                         className="size-2 rounded-full bg-indigo-500"
@@ -201,8 +243,13 @@ export default function About() {
                     <h3 className="flex gap-x-1.5 justify-center font-semibold">
                       Higher Secondary @ OUR ABC ACADEMY
                     </h3>
-                    <p className={`mt-1 text-sm text-center ${isDark ? "text-neutral-400" : "text-gray-600"}`}>
-                      Completed 11th and 12th in Science stream (2021–2023), focused on Mathematics, Physics, and Computer Science.
+                    <p
+                      className={`mt-1 text-sm text-center ${
+                        isDark ? "text-neutral-400" : "text-gray-600"
+                      }`}
+                    >
+                      Completed 11th and 12th in Science stream (2021–2023),
+                      focused on Mathematics, Physics, and Computer Science.
                     </p>
                   </motion.div>
                 </motion.div>
@@ -223,7 +270,11 @@ export default function About() {
                       className="relative z-10 size-7 flex justify-center items-center"
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
-                      transition={{ delay: 0.8, type: "spring", stiffness: 200 }}
+                      transition={{
+                        delay: 0.8,
+                        type: "spring",
+                        stiffness: 200,
+                      }}
                     >
                       <motion.div
                         className="size-2 rounded-full bg-indigo-500"
@@ -251,8 +302,14 @@ export default function About() {
                     <h3 className="flex gap-x-1.5 justify-center font-semibold">
                       BCA @ Dibrugarh University
                     </h3>
-                    <p className={`mt-1 text-sm text-center ${isDark ? "text-neutral-400" : "text-gray-600"}`}>
-                      Currently pursuing Bachelor of Computer Applications (2023–2026), with a focus on backend development, software design, and data structures.
+                    <p
+                      className={`mt-1 text-sm text-center ${
+                        isDark ? "text-neutral-400" : "text-gray-600"
+                      }`}
+                    >
+                      Currently pursuing Bachelor of Computer Applications
+                      (2023–2026), with a focus on backend development, software
+                      design, and data structures.
                     </p>
                   </motion.div>
                 </motion.div>

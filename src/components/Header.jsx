@@ -42,7 +42,9 @@ export default function Header({ theme, setTheme }) {
   const Brand = () => (
     <div className="flex items-center justify-between py-5 md:block">
       <motion.h1
-        className={`${theme === 'dark' ? "text-white" : "text-gray-900"} text-2xl font-bold`}
+        className={`${
+          theme === "dark" ? "text-white" : "text-gray-900"
+        } text-2xl font-bold`}
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
@@ -70,7 +72,12 @@ export default function Header({ theme, setTheme }) {
           onClick={() => setState(!state)}
         >
           {state ? (
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
               <path
                 fillRule="evenodd"
                 d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
@@ -78,8 +85,19 @@ export default function Header({ theme, setTheme }) {
               />
             </svg>
           ) : (
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
             </svg>
           )}
         </button>
@@ -99,7 +117,8 @@ export default function Header({ theme, setTheme }) {
           zIndex: -1,
           pointerEvents: "none",
           filter: "blur(80px)",
-          background: "linear-gradient(135deg, rgba(99,102,241,0.2), rgba(232,121,249,0.1), rgba(99,102,241,0.15))",
+          background:
+            "linear-gradient(135deg, rgba(99,102,241,0.2), rgba(232,121,249,0.1), rgba(99,102,241,0.15))",
         }}
       />
 
@@ -123,7 +142,9 @@ export default function Header({ theme, setTheme }) {
                 {navigation.map((item, idx) => (
                   <motion.li
                     key={idx}
-                    className={`${theme === 'dark' ? "text-white" : "text-gray-900"} hover:text-blue-600 transition-colors duration-200`}
+                    className={`${
+                      theme === "dark" ? "text-white" : "text-gray-900"
+                    } hover:text-blue-600 transition-colors duration-200`}
                     variants={itemVariants}
                   >
                     <Link
@@ -160,21 +181,29 @@ export default function Header({ theme, setTheme }) {
                 </motion.button>
 
                 {/* Hire Me Button */}
-                <motion.a
-                  href="/contact"
-                  className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 active:bg-gray-900 rounded-full shadow-lg"
+                <motion.div
                   whileHover={{ scale: 1.07, boxShadow: "0 4px 24px #6366f1" }}
                   whileTap={{ scale: 0.97 }}
                 >
-                  Hire Me
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path
-                      fillRule="evenodd"
-                      d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </motion.a>
+                  <Link
+                    to="/contact"
+                    className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 active:bg-gray-900 rounded-full shadow-lg"
+                  >
+                    Hire Me
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-5 h-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </Link>
+                </motion.div>
               </motion.div>
             </div>
           </div>
