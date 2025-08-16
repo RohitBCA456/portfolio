@@ -199,7 +199,7 @@ export default function About() {
                   </motion.a>
 
                   <motion.a
-                    href="https://www.instagram.com/_rohittttt_?igsh=MWVwMnVmZ2dndjA4dA%3D%3D&utm_source=qr"
+                    href="https://www.instagram.com/_rohittttt_/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`p-2 rounded-full transition-all duration-200 ${
