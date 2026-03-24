@@ -12,9 +12,9 @@ const technologies = [
     desc: "Building scalable backend applications using JavaScript on the server side.",
   },
   {
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-    title: "Express.js",
-    desc: "Fast and minimalist framework I use for creating powerful APIs and servers.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    title: "MySQL",
+    desc: "Designing and managing relational databases with complex queries and optimizations.",
   },
   {
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
@@ -22,14 +22,20 @@ const technologies = [
     desc: "I prefer MongoDB for storing structured and unstructured data in scalable apps.",
   },
   {
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-    title: "Git",
-    desc: "Version control with Git helps me manage code efficiently across projects.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+    title: "Redis",
+    desc: "Utilizing Redis for high-performance caching and real-time data processing.",
   },
   {
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     title: "Python",
-    desc: "I use Python for scripting, automation, and cyber security tools.",
+    desc: "I use Python for scripting, automation, and AI-driven development.",
+  },
+  {
+    // Base64 encoded LangChain logo (The🦜icon)
+    image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzEzM0QzMyIgZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bS0xIDUuNWMwLS4yOC4yMi0uNS41LS41czIuNSAwIDIuNSAyLjUtLjY3IDIuNS0xLjUgMi41TTEyIDE4Yy0zLjMxIDAtNi0yLjY5LTYtNnMyLjY5LTYgNi02IDYgMi42OSA2IDYtMi42OSA2LTYgNnoiLz48L3N2Zz4=",
+    title: "LangChain",
+    desc: "Developing LLM-powered applications and sophisticated AI workflows.",
   },
   {
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
@@ -37,14 +43,9 @@ const technologies = [
     desc: "Containerizing apps using Docker ensures consistency and easy deployments.",
   },
   {
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
-    title: "Microservices",
-    desc: "I design microservice architectures for scalable, decoupled systems.",
-  },
-  {
-    image: "https://cdn-icons-png.flaticon.com/512/2756/2756657.png",
-    title: "Ethical Hacking",
-    desc: "I build and test security tools and scripts for ethical hacking using Python.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    title: "Git",
+    desc: "Version control with Git helps me manage code efficiently across projects.",
   },
 ];
 
@@ -84,7 +85,7 @@ export default function Tech({ theme }) {
             Technologies I Work With
           </h3>
           <p className={`mt-3 ${isDark ? "text-gray-300" : "text-gray-600"}`}>
-            From frontend frameworks to backend services and cybersecurity, here’s my current tech stack.
+            From modern frontend frameworks to AI orchestration and scalable databases.
           </p>
         </motion.div>
 
@@ -109,7 +110,7 @@ export default function Tech({ theme }) {
                   whileHover={{ rotate: 8, scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 200 }}
                 >
-                  <img src={tech.image} alt={tech.title} className="w-8 h-8" />
+                  <img src={tech.image} alt={tech.title} className="w-8 h-8 object-contain" />
                 </motion.div>
                 <h4 className={`text-lg font-semibold ${isDark ? "text-white" : "text-gray-800"}`}>
                   {tech.title}

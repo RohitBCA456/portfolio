@@ -6,6 +6,33 @@ import { useOutletContext } from "react-router-dom";
 // Updated projects array with tech tags
 const projects = [
   {
+    title: "DockerAgent",
+    description:
+      "An automated container management tool that uses specialized agents to monitor, scale, and heal Docker-based microservices autonomously.",
+    image: "https://cdn.dribbble.com/userupload/24402225/file/original-4256973cace26f81b3ea48264db5a642.gif",
+    link: "https://github.com/RohitBCA456/DockerizeAgent.git",
+    liveLink: null,
+    tags: ["Docker", "Devops", "Shell Scripting", "API"],
+  },
+  {
+    title: "AI-Memory Engine",
+    description:
+      "A sophisticated vector database integration layer that provides long-term memory for LLMs using semantic search and RAG patterns.",
+    image: "https://rbcborealis.com/wp-content/uploads/2022/10/GremlinCCExplainability_Header_v2.gif",
+    link: "https://github.com/RohitBCA456/ai-memory-engine.git",
+    liveLink: "https://ai-memory-engine.onrender.com/",
+    tags: ["Python", "Pinecone", "LangChain", "Ollama"],
+  },
+  {
+    title: "NotifyHub",
+    description:
+      "A centralized notification microservice capable of handling push, email, and SMS triggers with retry logic and delivery tracking.",
+    image: "https://cdn.dribbble.com/userupload/22316154/file/original-4256048f3c92914805a1b56c91d2d719.gif",
+    link: "https://github.com/RohitBCA456/notifyhub.git",
+    liveLink: "https://notifyhub-fh7h.onrender.com/",
+    tags: ["Node.js", "Redis", "BullMQ", "Twilio"],
+  },
+  {
     title: "Service Provider Website",
     description:
       "A platform for local service providers to connect with customers, featuring profiles, booking, and review systems.",
@@ -16,63 +43,21 @@ const projects = [
     tags: ["React", "Node.js", "Express", "MongoDB"],
   },
   {
-    title: "Real-Time Chat App",
+    title: "E-Commerce Backend",
     description:
-      "A socket-based chat application with user authentication, real-time messaging, and room management.",
-    image:
-      "https://i.pinimg.com/originals/e3/1b/75/e31b752875679b64fce009922f9f0dda.gif",
-    link: "https://github.com/RohitBCA456/chat-Application.git",
-    liveLink: "https://chat-application-six-theta.vercel.app/",
-    tags: ["Node.js", "Socket.IO", "Express", "JWT"],
+      "Scalable RESTful API featuring complex product filtering, Stripe payment integration, and JWT-based RBAC.",
+    image: "https://mindyouinfotech.com/img/ecom_ser.gif",
+    link: "https://github.com/RohitBCA456/E-commerce.git",
+    tags: ["Node.js", "Express", "PostgreSQL", "Stripe"],
   },
-  {
-    title: "Clinic Management System",
+ {
+    title: "Teacher-Student Appointment System",
     description:
-      "Full-stack app to manage appointments, patient data, billing, and prescriptions with print/download support.",
-    image:
-      "https://cdn.dribbble.com/userupload/21746974/file/original-e3f63cef30c817b4090095315d32bc3a.gif",
-    link: "https://github.com/RohitBCA456/clinic-management-system.git",
-    liveLink: "https://clinic-managementt.netlify.app/",
-    tags: ["Node.js", "EJS", "Bootstrap", "MongoDB"],
-  },
-  {
-    title: "Teacher-Student Appointment Booking",
-    description:
-      "Role-based system for booking and managing student-teacher appointments with real-time chat and an admin dashboard.",
-    image:
-      "https://cdn.dribbble.com/userupload/42496357/file/original-0fa59c7c722dcf8c09bed623df9de89f.gif",
+      "A role-based scheduling platform featuring real-time availability tracking, automated booking confirmations, and an integrated administrative dashboard.",
+    image: "https://cdn.dribbble.com/userupload/42496357/file/original-0fa59c7c722dcf8c09bed623df9de89f.gif",
     link: "https://github.com/RohitBCA456/student-Teacher-appointment-Booking-system.git",
     liveLink: "https://student-teacher-appointment-bboking.netlify.app/",
-    tags: ["React", "Node.js", "AdminLTE", "Socket.IO"],
-  },
-  {
-    title: "Blood Donation App",
-    description:
-      "A platform for donors and seekers to connect. Built without React, with a Node.js backend.",
-    image:
-      "https://media.tenor.com/AagDHSXzOb0AAAAM/affordable-healthcare-statue-of-liberty.gif",
-    link: "https://github.com/RohitBCA456/Blood-Donation",
-    liveLink: "https://blood-donation-frontend-rho.vercel.app/",
-    tags: ["HTML", "CSS", "JavaScript", "Node.js"],
-  },
-  {
-    title: "E-Commerce Website",
-    description:
-      "Node.js backend with product management, user authentication, and shopping cart. Bootstrap-based frontend UI.",
-    image:
-      "https://assets-v2.lottiefiles.com/a/1d3a85ac-1184-11ee-9ec5-63dd7c736df9/fokktW0wa7.gif",
-    link: "https://github.com/RohitBCA456/E-commerce",
-    liveLink: null,
-    tags: ["Node.js", "Bootstrap", "Express"],
-  },
-  {
-    title: "Voting App",
-    description:
-      "Simple and secure voting system where users can vote once per poll. Backend-focused project with proper validations.",
-    image: "https://cdn-icons-gif.flaticon.com/12764/12764460.gif",
-    link: "https://github.com/RohitBCA456/voting-app",
-    liveLink: null,
-    tags: ["Node.js", "JWT", "MongoDB"],
+    tags: ["React", "Node.js", "Socket.IO", "MongoDB"],
   },
 ];
 

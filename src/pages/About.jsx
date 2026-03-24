@@ -5,7 +5,7 @@ import { useOutletContext } from "react-router-dom";
 import Container from "../components/Container";
 import me from "../assets/me.jpeg";
 import { motion } from "framer-motion";
-import resume from "../assets/RESUME 2.pdf";
+import resume from "../assets/Rohit_Yadav_Resume.pdf";
 import { Link } from "react-router-dom";
 
 export default function About() {
@@ -199,7 +199,7 @@ export default function About() {
                   </motion.a>
 
                   <motion.a
-                    href="https://www.instagram.com/_rohittttt_"
+                    href="https://www.instagram.com/rohitt.8080"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`p-2 rounded-full transition-all duration-200 ${

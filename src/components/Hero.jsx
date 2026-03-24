@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useOutletContext } from "react-router-dom";
-import resume from "../assets/RESUME 2.pdf"
+import resume from "../assets/Rohit_Yadav_Resume.pdf";
 
 export default () => {
 

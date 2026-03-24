@@ -3,34 +3,30 @@ import React from "react";
 // Updated data with live links and tech tags
 const projects = [
   {
-    title: "Real-Time Chat App",
+    title: "AI-Memory Engine",
     description:
-      "A socket-based chat application with user authentication, real-time messaging, and message status tracking.",
-    image:
-      "https://i.pinimg.com/originals/e3/1b/75/e31b752875679b64fce009922f9f0dda.gif",
-    link: "https://github.com/RohitBCA456/chat-Application.git",
-    liveLink: "https://chat-application-six-theta.vercel.app/",
-    tags: ["Node.js", "Socket.IO", "Express", "JWT"],
+      "A sophisticated vector database integration layer that provides long-term memory for LLMs using semantic search and RAG patterns.",
+    image: "https://rbcborealis.com/wp-content/uploads/2022/10/GremlinCCExplainability_Header_v2.gif",
+    link: "https://github.com/RohitBCA456/ai-memory-engine.git",
+    liveLink: "https://ai-memory-engine.onrender.com/",
+    tags: ["Python", "Pinecone", "LangChain", "Ollama"],
   },
   {
-    title: "Clinic Management System",
+    title: "NotifyHub",
     description:
-      "Full-stack system to manage appointments, patients, billing, and prescription generation using Node.js and MongoDB.",
-    image:
-      "https://cdn.dribbble.com/userupload/21746974/file/original-e3f63cef30c817b4090095315d32bc3a.gif",
-    link: "https://github.com/RohitBCA456/clinic-management-system.git",
-    liveLink: "https://clinic-managementt.netlify.app/",
-    tags: ["Node.js", "EJS", "Bootstrap", "MongoDB"],
+      "A centralized notification microservice capable of handling push, email, and SMS triggers with retry logic and delivery tracking.",
+    image: "https://cdn.dribbble.com/userupload/22316154/file/original-4256048f3c92914805a1b56c91d2d719.gif",
+    link: "https://github.com/RohitBCA456/notifyhub.git",
+    liveLink: "https://notifyhub-fh7h.onrender.com/",
+    tags: ["Node.js", "Redis", "RabbitMQ", "Twilio"],
   },
   {
-    title: "Teacher-Student Appointment Booking",
+    title: "E-Commerce Backend",
     description:
-      "A role-based app for students to book appointments and chat with teachers in real-time.",
-    image:
-      "https://cdn.dribbble.com/userupload/42496357/file/original-0fa59c7c722dcf8c09bed623df9de89f.gif",
-    link: "https://github.com/RohitBCA456/student-Teacher-appointment-Booking-system.git",
-    liveLink: "https://student-teacher-appointment-bboking.netlify.app/",
-    tags: ["React", "Node.js", "Socket.IO", "AdminLTE"],
+      "Scalable RESTful API featuring complex product filtering, Stripe payment integration, and JWT-based RBAC.",
+    image: "https://mindyouinfotech.com/img/ecom_ser.gif",
+    link: "https://github.com/RohitBCA456/E-commerce.git",
+    tags: ["Node.js", "Express", "Microservice", "Stripe"],
   },
 ];
 
