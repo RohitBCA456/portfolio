@@ -46,7 +46,8 @@ export default function ContactForm() {
               name: formData.fullName,
               subject: formData.subject,
               message: formData.message,
-              email: "rohit7120yadav@gmail.com",
+              email: formData.email,
+              to_email: "rohit7120yadav@gmail.com"
             },
             import.meta.env.VITE_PUBLIC_KEY 
           ),
