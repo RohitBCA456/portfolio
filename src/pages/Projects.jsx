@@ -8,56 +8,56 @@ const projects = [
   {
     title: "DockerAgent",
     description:
-      "An automated container management tool that uses specialized agents to monitor, scale, and heal Docker-based microservices autonomously.",
+      "DeployBot: an Deterministic DevOps agent that scans a repo to generate Dockerfiles and Kubernetes manifests, renders live architecture diagrams, and runs automated vulnerability/threat-model security audits with disaster-recovery planning — gated behind Google OAuth.",
     image: "https://cdn.dribbble.com/userupload/24402225/file/original-4256973cace26f81b3ea48264db5a642.gif",
     link: "https://github.com/RohitBCA456/DockerizeAgent.git",
     liveLink: null,
-    tags: ["Docker", "Devops", "Shell Scripting", "API"],
+    tags: ["Docker", "Kubernetes", "OAuth 2.0", "Mermaid.js", "DevOps"],
   },
   {
     title: "AI-Memory Engine",
     description:
-      "A sophisticated vector database integration layer that provides long-term memory for LLMs using semantic search and RAG patterns.",
+      "A hybrid microservice backend (9 independent services) that gives AI apps persistent, semantically-searchable memory — using Redis for short-term context, MongoDB for long-term storage, and Ollama embeddings for meaning-based retrieval, with a React dashboard and JS SDK.",
     image: "https://rbcborealis.com/wp-content/uploads/2022/10/GremlinCCExplainability_Header_v2.gif",
     link: "https://github.com/RohitBCA456/ai-memory-engine.git",
     liveLink: "https://ai-memory-engine.onrender.com/",
-    tags: ["Python", "Pinecone", "LangChain", "Ollama"],
+    tags: ["Node.js", "React", "Redis", "MongoDB", "Ollama", "Docker", "pincone", "RAG"],
   },
   {
     title: "NotifyHub",
     description:
-      "A centralized notification microservice capable of handling push, email, and SMS triggers with retry logic and delivery tracking.",
+      "A real-time notification platform delivering email (Resend), SMS (Twilio), and in-app alerts (Socket.IO), with RabbitMQ handling async dispatch, Redis caching, and a delivery-analytics dashboard.",
     image: "https://cdn.dribbble.com/userupload/22316154/file/original-4256048f3c92914805a1b56c91d2d719.gif",
     link: "https://github.com/RohitBCA456/notifyhub.git",
     liveLink: "https://notifyhub-fh7h.onrender.com/",
-    tags: ["Node.js", "Redis", "BullMQ", "Twilio"],
+    tags: ["Node.js", "RabbitMQ", "Redis", "Socket.IO", "MongoDB", "CI/CD", "Testing"],
   },
   {
     title: "Service Provider Website",
     description:
-      "A platform for local service providers to connect with customers, featuring profiles, booking, and review systems.",
+      "A platform connecting customers with local service providers, featuring profiles, location-based discovery, bookings with ratings, real-time chat (Socket.IO + Redis), and PayPal/Razorpay checkout.",
     image:
       "https://globaleducation.s3.ap-south-1.amazonaws.com/globaledu/gif/psd-to-html.gif",
     link: "https://github.com/RohitBCA456/service-provider-website.git",
     liveLink: "https://service-provider-roan.vercel.app/",
-    tags: ["React", "Node.js", "Express", "MongoDB"],
+    tags: ["React", "Node.js", "MongoDB", "Socket.IO", "PayPal"],
   },
   {
     title: "E-Commerce Backend",
     description:
-      "Scalable RESTful API featuring complex product filtering, Stripe payment integration, and JWT-based RBAC.",
+      "A microservices-based e-commerce backend with separate cart, order, payment, and user services communicating via RabbitMQ behind an API gateway, built on Node.js/Express and MongoDB.",
     image: "https://mindyouinfotech.com/img/ecom_ser.gif",
     link: "https://github.com/RohitBCA456/E-commerce.git",
-    tags: ["Node.js", "Express", "PostgreSQL", "Stripe"],
+    tags: ["Node.js", "Express", "MongoDB", "RabbitMQ", "Microservices"],
   },
  {
     title: "Teacher-Student Appointment System",
     description:
-      "A role-based scheduling platform featuring real-time availability tracking, automated booking confirmations, and an integrated administrative dashboard.",
+      "A role-based appointment platform for students, teachers, and admins — students search teachers and send booking requests, teachers accept/reject them, and both sides get real-time chat via Socket.IO, backed by a Node.js/Express/MongoDB API.",
     image: "https://cdn.dribbble.com/userupload/42496357/file/original-0fa59c7c722dcf8c09bed623df9de89f.gif",
     link: "https://github.com/RohitBCA456/student-Teacher-appointment-Booking-system.git",
     liveLink: "https://student-teacher-appointment-bboking.netlify.app/",
-    tags: ["React", "Node.js", "Socket.IO", "MongoDB"],
+    tags: ["Node.js", "Express", "MongoDB", "Socket.IO", "Bootstrap"],
   },
 ];
 
