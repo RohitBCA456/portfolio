@@ -105,7 +105,7 @@ export default function About() {
                   variants={itemVariants}
                 >
                   When I’m not coding, I enjoy exploring new tech trends,
-                  contributing to open source, and sharing my knowledge to help
+                  and sharing my knowledge to help
                   others grow.
                 </motion.p>
 
@@ -231,7 +231,8 @@ export default function About() {
                 <motion.img
                   src={me}
                   alt="Rohit Yadav"
-                  className="rounded-full w-90 h-90 md:w-90 aspect-square object-cover shadow-lg"
+                  // {/* Changed object-cover to object-cover object-bottom */}
+                  className="rounded-full w-100 h-100 md:w-90 aspect-square object-cover object-bottom shadow-lg"
                   whileHover={{ scale: 1.05, rotate: 2 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 />

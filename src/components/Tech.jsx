@@ -2,50 +2,49 @@ import { motion } from "framer-motion";
 
 const technologies = [
   {
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    title: "JavaScript / TypeScript",
+    desc: "Writing clean, asynchronous code across the entire stack for real-time and scalable systems.",
+  },
+  {
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    title: "React",
-    desc: "I use React to build dynamic and responsive UIs with reusable components.",
+    title: "React.js",
+    desc: "Building highly interactive, responsive user interfaces and modular frontend architectures.",
   },
   {
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    title: "Node.js",
-    desc: "Building scalable backend applications using JavaScript on the server side.",
-  },
-  {
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    title: "MySQL",
-    desc: "Designing and managing relational databases with complex queries and optimizations.",
+    title: "Node.js & Express",
+    desc: "Developing performant REST APIs, microservices, and utilizing native testing patterns.",
   },
   {
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
     title: "MongoDB",
-    desc: "I prefer MongoDB for storing structured and unstructured data in scalable apps.",
+    desc: "Designing flexible, document-oriented schemas and managing collections for data-driven apps.",
   },
   {
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
     title: "Redis",
-    desc: "Utilizing Redis for high-performance caching and real-time data processing.",
+    desc: "Implementing high-performance caching layers and fast in-memory data structures.",
   },
   {
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-    title: "Python",
-    desc: "I use Python for scripting, automation, and AI-driven development.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rabbitmq/rabbitmq-original.svg",
+    title: "RabbitMQ",
+    desc: "Structuring reliable event-driven messaging, background workers, and task queues.",
   },
   {
-    // Base64 encoded LangChain logo (The🦜icon)
-    image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzEzM0QzMyIgZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bS0xIDUuNWMwLS4yOC4yMi0uNS41LS41czIuNSAwIDIuNSAyLjUtLjY3IDIuNS0xLjUgMi41TTEyIDE4Yy0zLjMxIDAtNi0yLjY5LTYtNnMyLjY5LTYgNi02IDYgMi42OSA2IDYtMi42OSA2LTYgNnoiLz48L3N2Zz4=",
-    title: "LangChain",
-    desc: "Developing LLM-powered applications and sophisticated AI workflows.",
+    image: "https://unpkg.com/simple-icons@v13/icons/langchain.svg",
+    title: "AI Integration & Vectors",
+    desc: "Orchestrating LLM contexts, vector memory layers, and intelligent prompt pipelines.",
   },
   {
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
     title: "Docker",
-    desc: "Containerizing apps using Docker ensures consistency and easy deployments.",
+    desc: "Containerizing applications and configuring isolated networks for consistent deployments.",
   },
   {
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-    title: "Git",
-    desc: "Version control with Git helps me manage code efficiently across projects.",
+    title: "Git & Version Control",
+    desc: "Managing complex feature branches, collaborative workflows, and clean commit histories.",
   },
 ];
 
