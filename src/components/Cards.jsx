@@ -5,28 +5,30 @@ const projects = [
   {
     title: "AI-Memory Engine",
     description:
-      "A sophisticated vector database integration layer that provides long-term memory for LLMs using semantic search and RAG patterns.",
-    image: "https://rbcborealis.com/wp-content/uploads/2022/10/GremlinCCExplainability_Header_v2.gif",
+      "A hybrid microservice backend (9 independent services) that gives AI apps persistent, semantically-searchable memory — using Redis for short-term context, MongoDB for long-term storage, and Ollama embeddings for meaning-based retrieval, with a React dashboard and JS SDK.",
+    image:
+      "https://rbcborealis.com/wp-content/uploads/2022/10/GremlinCCExplainability_Header_v2.gif",
     link: "https://github.com/RohitBCA456/ai-memory-engine.git",
     liveLink: "https://ai-memory-engine.onrender.com/",
-    tags: ["Python", "Pinecone", "LangChain", "Ollama"],
+    tags: ["Node.js", "React", "Redis", "MongoDB", "Ollama", "Docker"],
   },
   {
     title: "NotifyHub",
     description:
-      "A centralized notification microservice capable of handling push, email, and SMS triggers with retry logic and delivery tracking.",
-    image: "https://cdn.dribbble.com/userupload/22316154/file/original-4256048f3c92914805a1b56c91d2d719.gif",
+      "A real-time notification platform delivering email (Resend), SMS (Twilio), and in-app alerts (Socket.IO), with RabbitMQ handling async dispatch, Redis caching, and a delivery-analytics dashboard.",
+    image:
+      "https://cdn.dribbble.com/userupload/22316154/file/original-4256048f3c92914805a1b56c91d2d719.gif",
     link: "https://github.com/RohitBCA456/notifyhub.git",
     liveLink: "https://notifyhub-fh7h.onrender.com/",
-    tags: ["Node.js", "Redis", "RabbitMQ", "Twilio"],
+    tags: ["Node.js", "RabbitMQ", "Redis", "Socket.IO", "MongoDB"],
   },
   {
     title: "E-Commerce Backend",
     description:
-      "Scalable RESTful API featuring complex product filtering, Stripe payment integration, and JWT-based RBAC.",
+      "A microservices-based e-commerce backend with separate cart, order, payment, and user services communicating via RabbitMQ behind an API gateway, built on Node.js/Express and MongoDB.",
     image: "https://mindyouinfotech.com/img/ecom_ser.gif",
     link: "https://github.com/RohitBCA456/E-commerce.git",
-    tags: ["Node.js", "Express", "Microservice", "Stripe"],
+    tags: ["Node.js", "Express", "MongoDB", "RabbitMQ", "Microservices"],
   },
 ];
 
@@ -144,11 +146,10 @@ export default function Cards({ theme }) {
                     className="inline-flex items-center justify-center w-full px-4 py-2 bg-gray-800 text-white text-sm font-semibold rounded-lg shadow hover:bg-black transition dark:bg-indigo-600 dark:hover:bg-indigo-700"
                   >
                     View Code
-                     {/* --- ICON ADDED HERE --- */}
+                    {/* --- ICON ADDED HERE --- */}
                     <svg
                       className="ml-2 w-4 h-4"
                       fill="none"
-      
                       stroke="currentColor"
                       strokeWidth={2}
                       viewBox="0 0 24 24"
